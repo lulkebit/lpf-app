@@ -6,15 +6,17 @@ export const theme = createTheme({
             main: '#FF0000', // Sparkassen-Rot
             light: '#ff3333',
             dark: '#cc0000',
+            contrastText: '#ffffff',
         },
         secondary: {
-            main: '#333333', // Dunkelgrau für sekundäre Elemente
+            main: '#333333', // Dunkelgrau
             light: '#666666',
             dark: '#1a1a1a',
+            contrastText: '#ffffff',
         },
         background: {
-            default: '#ffffff',
-            paper: '#f5f5f5',
+            default: '#f7f7f7',
+            paper: '#ffffff',
         },
         text: {
             primary: '#333333',
@@ -22,12 +24,27 @@ export const theme = createTheme({
         },
         error: {
             main: '#d32f2f',
+            contrastText: '#ffffff',
         },
         warning: {
             main: '#ffa726',
+            contrastText: '#ffffff',
         },
         success: {
             main: '#2e7d32',
+            contrastText: '#ffffff',
+        },
+        grey: {
+            50: '#fafafa',
+            100: '#f5f5f5',
+            200: '#eeeeee',
+            300: '#e0e0e0',
+            400: '#bdbdbd',
+            500: '#9e9e9e',
+            600: '#757575',
+            700: '#616161',
+            800: '#424242',
+            900: '#212121',
         },
     },
     typography: {
@@ -53,6 +70,18 @@ export const theme = createTheme({
         },
     },
     components: {
+        MuiLinearProgress: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                    borderRadius: 8,
+                },
+                bar: {
+                    borderRadius: 8,
+                    backgroundColor: '#ffffff',
+                },
+            },
+        },
         MuiButton: {
             styleOverrides: {
                 root: {
@@ -72,7 +101,7 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     borderRadius: 8,
-                    boxShadow: '0px 2px 4px rgba(0,0,0,0.1)',
+                    boxShadow: '0px 2px 8px rgba(0,0,0,0.08)',
                 },
             },
         },
@@ -80,6 +109,22 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     boxShadow: '0px 1px 3px rgba(0,0,0,0.1)',
+                },
+            },
+        },
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    '&[class*="primary"]': {
+                        backgroundColor: '#FF0000',
+                        color: '#ffffff',
+                        '& .MuiLinearProgress-root': {
+                            backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                        },
+                        '& .MuiLinearProgress-bar': {
+                            backgroundColor: '#ffffff',
+                        },
+                    },
                 },
             },
         },
