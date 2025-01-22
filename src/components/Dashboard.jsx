@@ -16,6 +16,8 @@ import {
     Timeline as TimelineIcon,
     Star as StarIcon,
 } from '@mui/icons-material';
+import RecentActivities from './RecentActivities';
+import NextSteps from './NextSteps';
 
 function Dashboard() {
     const progress = 35; // Beispiel-Fortschritt
@@ -57,10 +59,20 @@ function Dashboard() {
                 <Typography variant='h4' gutterBottom>
                     Willkommen zurück!
                 </Typography>
+
+                <Grid container spacing={3}>
+                    <Grid item xs={12} md={8}>
+                        <RecentActivities />
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <NextSteps />
+                    </Grid>
+                </Grid>
+
                 <Paper
                     sx={{
                         p: 2,
-                        mb: 3,
+                        mt: 3,
                         backgroundColor: 'primary.light',
                         color: 'white',
                     }}
