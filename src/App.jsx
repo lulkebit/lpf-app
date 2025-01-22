@@ -6,6 +6,12 @@ import Dashboard from './components/Dashboard';
 import CourseList from './components/courses/CourseList';
 import CourseDetail from './components/courses/CourseDetail';
 
+// Platzhalter-Komponenten für die anderen Routen
+const Exercises = () => <div>Übungen (In Entwicklung)</div>;
+const Resources = () => <div>Ressourcen (In Entwicklung)</div>;
+const Profile = () => <div>Profil (In Entwicklung)</div>;
+const Notifications = () => <div>Benachrichtigungen (In Entwicklung)</div>;
+
 function App() {
     return (
         <BrowserRouter>
@@ -17,6 +23,13 @@ function App() {
                         <Route path='/' element={<Dashboard />} />
                         <Route path='/courses' element={<CourseList />} />
                         <Route path='/course/:id' element={<CourseDetail />} />
+                        <Route path='/exercises' element={<Exercises />} />
+                        <Route path='/resources' element={<Resources />} />
+                        <Route path='/profile' element={<Profile />} />
+                        <Route
+                            path='/notifications'
+                            element={<Notifications />}
+                        />
                     </Routes>
                 </div>
             </ThemeProvider>
