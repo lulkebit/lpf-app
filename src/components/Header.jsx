@@ -22,6 +22,7 @@ function Header() {
         { label: 'Kurse', path: '/courses' },
         { label: 'Übungen', path: '/exercises' },
         { label: 'Ressourcen', path: '/resources' },
+        { label: 'Betreuer-Dashboard', path: '/mentor' },
     ];
 
     return (

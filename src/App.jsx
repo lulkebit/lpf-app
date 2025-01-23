@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Dashboard from './components/Dashboard';
 import CourseList from './components/courses/CourseList';
 import CourseDetail from './components/courses/CourseDetail';
+import MentorDashboard from './components/mentor/MentorDashboard';
 
 // Platzhalter-Komponenten für die anderen Routen
 const Exercises = () => <div>Übungen (In Entwicklung)</div>;
@@ -30,6 +31,7 @@ function App() {
                             path='/notifications'
                             element={<Notifications />}
                         />
+                        <Route path='/mentor' element={<MentorDashboard />} />
                     </Routes>
                 </div>
             </ThemeProvider>
