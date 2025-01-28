@@ -11,6 +11,7 @@ import {
 import { Search as SearchIcon } from '@mui/icons-material';
 import KnowledgeBaseCard from './KnowledgeBaseCard';
 import TaskSuggestions from './TaskSuggestions';
+import InternManagement from './InternManagement';
 
 function MentorDashboard() {
     const knowledgeBase = [
@@ -47,22 +48,7 @@ function MentorDashboard() {
             </Typography>
 
             <Paper sx={{ p: 3, mb: 4 }}>
-                <TextField
-                    fullWidth
-                    placeholder='Suche nach Themen, Aufgaben oder Systemen...'
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment position='start'>
-                                <SearchIcon />
-                            </InputAdornment>
-                        ),
-                    }}
-                />
-                <Box sx={{ mt: 2, display: 'flex', gap: 1 }}>
-                    <Chip label='OSPlus' color='primary' />
-                    <Chip label='Entwicklung' color='secondary' />
-                    <Chip label='Praktikumsaufgaben' color='success' />
-                </Box>
+                <InternManagement />
             </Paper>
 
             <Grid container spacing={3}>

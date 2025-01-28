@@ -2,25 +2,18 @@ import {
     Container,
     Grid,
     Paper,
-    LinearProgress,
     Typography,
     Avatar,
     Box,
-    Button,
     List,
     ListItem,
     ListItemIcon,
     ListItemText,
     Chip,
-    TextField,
-    Dialog,
-    DialogTitle,
-    DialogContent,
-    DialogActions,
+    LinearProgress,
 } from '@mui/material';
 import {
     School as SchoolIcon,
-    Edit as EditIcon,
     Email as EmailIcon,
     Phone as PhoneIcon,
     Business as BusinessIcon,
@@ -37,7 +30,8 @@ import { useNavigate } from 'react-router-dom';
 function Profile() {
     const navigate = useNavigate();
     
-    const [profileData, setProfileData] = useState({
+    // Demo-Daten (später durch echte Daten aus der Datenbank ersetzen)
+    const [profileData] = useState({
         name: 'Max Mustermann',
         role: 'Praktikant',
         email: 'max.mustermann@fi-ts.de',
@@ -49,32 +43,8 @@ function Profile() {
         mentor: 'Sarah Schmidt',
     });
 
-    const [editMode, setEditMode] = useState(false);
-    const [editedData, setEditedData] = useState({...profileData});
-
     const formatDate = (date) => {
         return new Date(date).toLocaleDateString('de-DE');
-    };
-
-    const handleEdit = () => {
-        setEditedData({...profileData});
-        setEditMode(true);
-    };
-
-    const handleSave = () => {
-        setProfileData(editedData);
-        setEditMode(false);
-    };
-
-    const handleCancel = () => {
-        setEditMode(false);
-    };
-
-    const handleChange = (field) => (event) => {
-        setEditedData({
-            ...editedData,
-            [field]: event.target.value
-        });
     };
 
     return (
@@ -120,13 +90,6 @@ function Profile() {
                                 />
                             </Box>
                         </Box>
-                        <Button 
-                            variant="outlined" 
-                            startIcon={<EditIcon />}
-                            onClick={handleEdit}
-                        >
-                            Bearbeiten
-                        </Button>
                     </Paper>
                 </Grid>
 
@@ -309,77 +272,6 @@ function Profile() {
                     </Paper>
                 </Grid>
             </Grid>
-
-            {/* Bearbeitungsdialog */}
-            <Dialog open={editMode} onClose={handleCancel} maxWidth="sm" fullWidth>
-                <DialogTitle>Profil bearbeiten</DialogTitle>
-                <DialogContent>
-                    <Box sx={{ pt: 2, display: 'flex', flexDirection: 'column', gap: 2 }}>
-                        <TextField
-                            label="Name"
-                            fullWidth
-                            value={editedData.name}
-                            onChange={handleChange('name')}
-                        />
-                        <TextField
-                            label="E-Mail"
-                            fullWidth
-                            value={editedData.email}
-                            onChange={handleChange('email')}
-                        />
-                        <TextField
-                            label="Telefon"
-                            fullWidth
-                            value={editedData.phone}
-                            onChange={handleChange('phone')}
-                        />
-                        <TextField
-                            label="Schule"
-                            fullWidth
-                            value={editedData.school}
-                            onChange={handleChange('school')}
-                        />
-                        <TextField
-                            label="Abteilung"
-                            fullWidth
-                            value={editedData.department}
-                            onChange={handleChange('department')}
-                        />
-                        <TextField
-                            label="Mentor"
-                            fullWidth
-                            value={editedData.mentor}
-                            onChange={handleChange('mentor')}
-                        />
-                        <TextField
-                            label="Praktikumsbeginn"
-                            type="date"
-                            fullWidth
-                            value={editedData.startDate}
-                            onChange={handleChange('startDate')}
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
-                        />
-                        <TextField
-                            label="Praktikumsende"
-                            type="date"
-                            fullWidth
-                            value={editedData.endDate}
-                            onChange={handleChange('endDate')}
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
-                        />
-                    </Box>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleCancel}>Abbrechen</Button>
-                    <Button onClick={handleSave} variant="contained" color="primary">
-                        Speichern
-                    </Button>
-                </DialogActions>
-            </Dialog>
         </Container>
     );
 }
