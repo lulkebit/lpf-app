@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { theme } from './theme/theme';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
+import Profile from './components/Profile';
 import CourseList from './components/courses/CourseList';
 import CourseDetail from './components/courses/CourseDetail';
 import MentorDashboard from './components/mentor/MentorDashboard';
@@ -11,7 +12,6 @@ import ExerciseList from './components/exercises/ExerciseList';
 import ExerciseDetail from './components/exercises/ExerciseDetail';
 
 // Platzhalter-Komponenten für die anderen Routen
-const Profile = () => <div>Profil (In Entwicklung)</div>;
 const Notifications = () => <div>Benachrichtigungen (In Entwicklung)</div>;
 
 function App() {
