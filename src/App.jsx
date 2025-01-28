@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { theme } from './theme/theme';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
-import Profile from './components/Profile';
+import Profile from './components/profile/Profile';
 import CourseList from './components/courses/CourseList';
 import CourseDetail from './components/courses/CourseDetail';
 import MentorDashboard from './components/mentor/MentorDashboard';

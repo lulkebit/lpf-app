@@ -42,6 +42,21 @@ function CourseList() {
                 { id: 4, title: 'DOM Manipulation', completed: false },
             ],
         },
+        {
+            id: 4,
+            title: 'iOS Entwicklung mit Swift',
+            description: 'Entwickle native iOS Apps mit Swift',
+            level: 'Fortgeschritten',
+            duration: '8 Wochen',
+            modules: [
+                { id: 1, title: 'Swift Grundlagen', completed: false },
+                { id: 2, title: 'UIKit & SwiftUI', completed: false },
+                { id: 3, title: 'iOS App Architektur', completed: false },
+                { id: 4, title: 'Daten & Netzwerk', completed: false },
+                { id: 5, title: 'iOS APIs & Services', completed: false },
+                { id: 6, title: 'App Store & Deployment', completed: false },
+            ],
+        },
     ];
 
     return (
