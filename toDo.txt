@@ -1,0 +1,119 @@
+1. **Dashboard**
+Vorhanden:
+- Übersicht der Programmiersprachen
+- Grundlegender Lernfortschritt
+- Letzte Aktivitäten
+- Nächste Schritte
+- Karten mit verschiedenen Kategorien (Programmiersprachen, Übungen, Tutorials)
+
+Fehlt:
+- Interaktive Fortschrittsanzeige
+- Echte Datenanbindung für Aktivitäten
+- Personalisierte Empfehlungen
+- Filter- und Sortiermöglichkeiten
+- Detaillierte Statistiken zum Lernfortschritt
+
+2. **Kursliste/Kursdetails**
+Vorhanden:
+- Übersicht aller verfügbaren Kurse
+- Grundlegende Kursinformationen
+- Modulare Struktur
+- Fortschrittsanzeige pro Kurs
+- "Starten" Funktion für Module
+- Suchfunktion für Kurse
+- Filter nach Schwierigkeitsgrad/Thema
+- Voraussetzungen für Kurse
+
+Fehlt:
+- Bewertungssystem
+- Downloadbare Materialien
+- Kurskalender/Zeitplan
+
+3. **Übungen**
+Vorhanden:
+- Liste der Übungen
+- Schwierigkeitsgrade
+- Kategorisierung
+- Fortschrittsanzeige
+- Grundlegende Suchfunktion
+
+Fehlt:
+- Code-Editor für direkte Eingabe
+- Automatische Testfälle
+- Lösungsvorschläge
+- Peer-Review-System
+- Hilfe-System bei Problemen
+- Möglichkeit zum Speichern von Zwischenständen
+
+4. **Profil**
+Vorhanden:
+- Grundlegende Nutzerdaten
+- Lernfortschritt
+- Achievements
+- Badges
+- Praktikumszeitraum
+
+Fehlt:
+- Profilbild-Upload
+- Skill-Matrix
+- Portfolio-Bereich
+- Einstellungen für Benachrichtigungen
+- Export von Lernfortschritten
+- Verknüpfung mit externen Profilen (z.B. GitHub)
+
+5. **Betreuer-Dashboard**
+Vorhanden:
+- Praktikantenverwaltung
+- Wissensdatenbank
+- Aufgabenvorschläge
+- Bearbeitung von Praktikantendaten
+
+Fehlt:
+- Fortschrittsverfolgung einzelner Praktikanten
+- Feedback-System
+- Terminplanung/Kalender
+- Dokumentenverwaltung
+- Berichtserstellung
+- Kommunikationssystem
+
+6. **Ressourcen**
+Vorhanden:
+- Kategorisierte Ressourcenliste
+- Verschiedene Ressourcentypen (Dokumentation, Video, Code)
+- Suchfunktion
+- Tag-System
+
+Fehlt:
+- Versionierung von Ressourcen
+- Kommentarsystem
+- Rating-System
+- Upload-Funktion für eigene Ressourcen
+- Download-Tracking
+- Favorites/Bookmarks
+
+7. **Modulinhalte**
+Vorhanden:
+- Theoretische Grundlagen
+- Übungen
+- Fortschrittsanzeige
+- Navigation zwischen Modulen
+
+Fehlt:
+- Interaktive Lernelemente
+- Direktes Feedback
+- Diskussionsmöglichkeiten
+- Zusätzliche Lernmaterialien
+- Quiz/Tests
+- Code-Ausführungsumgebung
+
+Allgemeine fehlende Features für alle Seiten:
+1. Backend-Integration
+2. Persistente Datenspeicherung
+3. Error Handling
+4. Ladeanimationen
+5. Responsive Design für mobile Geräte
+6. Offline-Funktionalität
+7. Berechtigungssystem
+8. Logging/Analytics
+9. Performance-Optimierung
+10. Accessibility Features
